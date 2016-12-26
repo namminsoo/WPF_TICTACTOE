@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="TIC_TAC_TOE.RecordViewPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TIC_TAC_TOE"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="600">
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="101" Margin="10,10,0,0" VerticalAlignment="Top" Width="348" Source="Img/title.gif"/>
+        <Button x:Name="btnBack"   Margin="473,502,52,24" Width="75" ToolTip="btnBack" Click="btnBack_Click" Background="#00000000" Foreground="#00000000" BorderBrush="#00000000">
+            <ContentControl>
+                <StackPanel Orientation="Horizontal" Width="Auto">
+                    <Image ToolTip="-"  Source="Img/back.png" Margin="0,0,0,0" />
+                </StackPanel>
+            </ContentControl>
+        </Button>
+        <ListView x:Name="listView1" HorizontalAlignment="Left" Height="422" Margin="30,154,0,0" VerticalAlignment="Top" Width="397" >
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="1P" Width="70" DisplayMemberBinding="{Binding P1}"  />
+                    <GridViewColumn Header="2P" Width="70" DisplayMemberBinding="{Binding P2}"/>
+                    <GridViewColumn Header="WIN" Width="70" DisplayMemberBinding="{Binding Win}"/>
+                    <GridViewColumn Header="TIME" Width="150" DisplayMemberBinding="{Binding Time}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</UserControl>
